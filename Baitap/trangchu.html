@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ | TechStore</title>
+    <!-- CSS Tối ưu với Design System & Animation -->
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"><link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
+<body>
+    <!-- Semantic HTML: Header -->
+    <header data-aos="fade-down" style="animation-delay: 0s;">
+        <div class="header-content container">
+            <a href="trangchu.html" class="logo">TechStore</a>
+            <nav class="nav-links">
+                <a href="trangchu.html">Trang chủ</a>
+                <a href="sanpham.html">Sản phẩm</a>
+                <a href="khuyenmai.html">Khuyến mãi</a>
+                <!-- Link giỏ hàng -->
+                <a href="thanhtoan.html" class="cart-icon" aria-label="Giỏ hàng">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-badge">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Semantic HTML: Main Content -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero" data-aos="zoom-in" style="animation-delay: 0.2s;">
+            <h1 data-aos="fade-right" style="animation-delay: 0.5s;">Khám Phá Công Nghệ Đỉnh Cao</h1>
+            <p data-aos="fade-left" style="animation-delay: 0.7s;">Nâng tầm trải nghiệm với các thiết bị và phụ kiện chính hãng, thiết kế hiện đại, giá tốt nhất thị trường.</p>
+            <a href="#products" class="hero-btn" data-aos="fade-up" style="animation-delay: 0.9s;">Mua Sắm Ngay</a>
+        </section>
+
+        <!-- Product Listing Section (Interactive Flip Cards) -->
+        <section id="products">
+            <h2 class="section-title" data-aos="fade-up" style="animation-delay: 0.2s;">Sản phẩm nổi bật</h2>
+            
+            <!-- Grid Layout Container -->
+            <div class="product-grid">
+                
+                <!-- P1 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.3s;">
+                    <div class="card-inner">
+                        <!-- Mặt trước (Front) -->
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=400&q=80" alt="Bàn phím cơ" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Bàn phím cơ Gaming RGB 104 phím cao cấp</h3>
+                                <div class="product-price">250.000đ</div>
+                            </div>
+                        </div>
+                        <!-- Mặt sau (Back) -->
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Switch Blue siêu nhạy, độ bền 50tr lần nhấn</li>
+                                <li>LED RGB 16.8 triệu màu, 10 chế độ</li>
+                                <li>Bề mặt kim loại chống bụi, chống nước</li>
+                            </ul>
+                            <div class="product-price">250.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(1, 'Bàn phím cơ Gaming RGB 104 phím', 250000, 'https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P2 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.4s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=400&q=80" alt="Chuột không dây" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Chuột không dây Magic Mouse siêu êm mượt mà</h3>
+                                <div class="product-price">100.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Công nghệ Silent không gây tiếng ồn</li>
+                                <li>Kết nối Bluetooth 5.0 và USB 2.4GHz</li>
+                                <li>DPI tùy chỉnh 800-1600-2400</li>
+                            </ul>
+                            <div class="product-price">100.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(2, 'Chuột không dây Magic Mouse siêu êm', 100000, 'https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P3 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.5s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSysYbP43KURBtlb5MpVudT4f3maoDFOI2Lso_TnSIA5Q&s=10" alt="Lót chuột" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Lót chuột Gaming XL Size bọc viền chống rách</h3>
+                                <div class="product-price">80.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Kích thước cực đại 80x30cm</li>
+                                <li>Bề mặt vải Speed tối ưu độ nhạy chuột</li>
+                                <li>Đế cao su thiên nhiên bám bàn chống trượt</li>
+                            </ul>
+                            <div class="product-price">80.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(3, 'Lót chuột Gaming XL Size bọc viền', 80000, 'https://images.unsplash.com/photo-1527814050087-17936a28533c?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P4 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.6s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Tai nghe" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Tai nghe Over-ear Bluetooth 5.0 âm thanh Vòm</h3>
+                                <div class="product-price">150.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Công nghệ âm thanh vòm 7.1 chân thực</li>
+                                <li>Đệm tai da PU thoáng khí, cách âm tốt</li>
+                                <li>Pin sử dụng liên tục lên đến 20h</li>
+                            </ul>
+                            <div class="product-price">150.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(4, 'Tai nghe Over-ear Bluetooth 5.0', 150000, 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P5 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.7s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=400&q=80" alt="Giá đỡ Laptop" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Giá đỡ Laptop Hợp kim nhôm nguyên khối tản nhiệt</h3>
+                                <div class="product-price">120.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Chất liệu hợp kim nhôm nguyên khối CNC</li>
+                                <li>Tùy chỉnh 6 góc độ làm việc linh hoạt</li>
+                                <li>Có đệm silicon chống xước máy</li>
+                            </ul>
+                            <div class="product-price">120.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(5, 'Giá đỡ Laptop Hợp kim nhôm', 120000, 'https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P6 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.8s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZdeS-EOamlDRLg5jPNkpyG1ztWTTIUrf7IwVCYCwzxQ&s=10" alt="USB" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">USB 64GB chuẩn 3.0 tốc độ cao, thiết kế nhỏ gọn</h3>
+                                <div class="product-price">95.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Dung lượng lưu trữ 64GB thực tế</li>
+                                <li>Chuẩn giao tiếp 3.0 chép dữ liệu cực nhanh</li>
+                                <li>Vỏ kim loại chống va đập, tản nhiệt tốt</li>
+                            </ul>
+                            <div class="product-price">95.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(6, 'USB 64GB chuẩn 3.0 tốc độ cao', 95000, 'https://images.unsplash.com/photo-1550525811-e5869dd03032?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P7 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 0.9s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=400&q=80" alt="Loa Bluetooth" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Loa Bluetooth Mini Bass mạnh chống nước chuẩn IPX7</h3>
+                                <div class="product-price">180.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>Công suất 15W, màng loa kép Bass mạnh</li>
+                                <li>Chống nước IPX7 chuẩn quân đội</li>
+                                <li>Bluetooth 5.3 kết nối ổn định xa 10m</li>
+                            </ul>
+                            <div class="product-price">180.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(7, 'Loa Bluetooth Mini Bass mạnh', 180000, 'https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- P8 -->
+                <article class="product-card" data-aos="fade-up" style="animation-delay: 1.0s;">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <figure class="product-img-wrapper">
+                                <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=400&q=80" alt="Cáp sạc" class="product-img" loading="lazy">
+                            </figure>
+                            <div class="product-info">
+                                <h3 class="product-title">Cáp sạc nhanh đa năng 3 in 1 siêu bền dây dù</h3>
+                                <div class="product-price">50.000đ</div>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <h3 class="product-title">Chi tiết kỹ thuật</h3>
+                            <ul class="product-specs">
+                                <li>3 đầu cắm: Type-C, Micro USB, Lightning</li>
+                                <li>Hỗ trợ sạc nhanh Max 3A cho thiết bị</li>
+                                <li>Lõi đồng to, bọc dù chống đứt gãy gập</li>
+                            </ul>
+                            <div class="product-price">50.000đ</div>
+                            <button class="add-to-cart-btn" onclick="addToCart(8, 'Cáp sạc nhanh đa năng 3 in 1', 50000, 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=150&q=80')">
+                                <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+        <!-- Call-to-Action -->
+        <section class="cta-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="cta-content">
+                <h2 data-aos="fade-right" data-aos-delay="200">Đăng ký nhận ưu đãi</h2>
+                <p data-aos="fade-left" data-aos-delay="300">Nhận ngay mã giảm giá 10% cho đơn hàng đầu tiên và cập nhật tin tức công nghệ mới nhất.</p>
+                <form class="cta-form" onsubmit="event.preventDefault(); alert('Cảm ơn bạn đã đăng ký!');" data-aos="zoom-in" data-aos-delay="400">
+                    <input type="email" placeholder="Nhập email của bạn..." required>
+                    <button type="submit" class="cta-btn">Đăng Ký Ngay</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Semantic HTML: Footer -->
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-col">
+                <h3>Về TechStore</h3>
+                <p>Nơi cung cấp các thiết bị và phụ kiện công nghệ hàng đầu với giá cả phải chăng và dịch vụ tận tâm.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Chính sách</h3>
+                <a href="#">Đổi trả trong 30 ngày</a>
+                <a href="#">Chính sách bảo mật thông tin</a>
+                <a href="#">Điều khoản sử dụng dịch vụ</a>
+            </div>
+            <div class="footer-col">
+                <h3>Hỗ trợ khách hàng</h3>
+                <a href="#">Trung tâm trợ giúp 24/7</a>
+                <a href="#">Hướng dẫn đặt hàng online</a>
+                <a href="#">Hotline: 1900 1234</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Giỏ Hàng -->
+    <script>
+        function updateCartBadge() {
+            let cart = JSON.parse(localStorage.getItem('techstore_cart')) || [];
+            let totalQty = 0;
+            cart.forEach(item => { totalQty += item.qty; });
+            const badge = document.getElementById('cart-badge');
+            badge.innerText = totalQty;
+            
+            // Trigger animation
+            badge.classList.remove('pulse');
+            void badge.offsetWidth; // trigger reflow
+            badge.classList.add('pulse');
+        }
+
+        function addToCart(id, name, price, img) {
+            let cart = JSON.parse(localStorage.getItem('techstore_cart')) || [];
+            let existingItemIndex = cart.findIndex(item => item.id === id);
+            
+            if (existingItemIndex !== -1) {
+                cart[existingItemIndex].qty += 1;
+            } else {
+                cart.push({ id, name, price, img, qty: 1 });
+            }
+            localStorage.setItem('techstore_cart', JSON.stringify(cart));
+            updateCartBadge();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateCartBadge);
+    </script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>AOS.init({duration: 800, once: true, offset: 50});</script></body>
+</html>
