@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-gradient="refresh" content="0; url=./TEN_THU_MUC_CUA_BAN/index.html" />
+    <script>
+        window.location.href = "./Baitap/index.html";
+    </script>
+</head>
+<body>
+    <p>Đang chuyển hướng...</p>
+</body>
+</html>
